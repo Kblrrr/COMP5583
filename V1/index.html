@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marcus Chan &mdash; Personal Website</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home">Marcus Chan</a>
+    <nav class="nav">
+      <a href="#home" class="nav-link is-active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#projects" class="nav-link">Projects</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+    <button id="themeToggle" class="theme-toggle" title="Switch between light and dark mode">&#127769;</button>
+  </div>
+</header>
+
+<main>
+
+  <section id="home" class="hero">
+    <div class="wrap hero-inner">
+      <p class="eyebrow">COMP5583 &middot; Personal Site</p>
+      <h1 class="hero-title">Hi, I&rsquo;m Marcus.</h1>
+      <p class="lede">Computer Science undergraduate at The Hong Kong Polytechnic University.
+      I build small, careful interfaces &mdash; mostly around maps, accessibility and study tools &mdash;
+      and I am currently learning how LLM agents can take part in that work.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="#projects">See my projects</a>
+        <a class="btn btn-ghost" href="#contact">Get in touch</a>
+      </div>
+      <ul class="quick-facts">
+        <li><span class="dot"></span> Hong Kong</li>
+        <li><span class="dot"></span> BSc (Hons) Computing, 2023&ndash;2027</li>
+        <li><span class="dot"></span> Open to summer internships</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="wrap">
+      <p class="kicker">01 &mdash; About</p>
+      <h2 class="section-title">Education &amp; interests</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3 class="sub-title">Education</h3>
+          <p><strong>The Hong Kong Polytechnic University</strong> (2023&ndash;2027, expected).
+          BSc (Hons) in Computer Science, Department of Computing.</p>
+          <p class="muted">Selected modules: Human-Computer Interaction, Mobile Application Development,
+          Data Visualisation, Machine Learning, Software Engineering, Agentic Computing.</p>
+
+          <h3 class="sub-title">What I care about</h3>
+          <p class="muted">Accessibility engineering, spatial interfaces, and the unglamorous parts of
+          software &mdash; documentation, error messages and keyboard support.</p>
+        </div>
+        <div class="about-figure">
+          <img class="avatar" src="assets/avatar.svg" alt="" width="200" height="200">
+          <p class="muted caption">A monogram, because I would rather not publish a photo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects" class="section section-alt">
+    <div class="wrap">
+      <p class="kicker">02 &mdash; Projects</p>
+      <h2 class="section-title">Things I have built</h2>
+      <p class="section-sub">Each card opens to show the purpose of the project and exactly what I contributed.</p>
+
+      <div class="project-grid">
+
+        <article class="card">
+          <div class="card-tag">Coursework</div>
+          <h3 class="card-title">CampusRoute</h3>
+          <p class="card-summary">Indoor wayfinding across the three connected PolyU buildings.</p>
+          <div class="card-details" id="d1" hidden>
+            <p><strong>Purpose.</strong> New students lose 10&ndash;15 minutes finding labs that sit behind
+            two or three connected blocks. CampusRoute gives turn-by-turn indoor directions instead of
+            a static floor plan.</p>
+            <p><strong>My contribution.</strong> I designed the floor-graph data model (412 nodes,
+            590 edges), wrote the A* router with stair and lift penalties, and built the map screen in
+            React Native. I coordinated a four-person team and wrote the test plan.</p>
+            <p class="muted">React Native, TypeScript, SQLite, MapLibre.</p>
+          </div>
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="d1">Show details<span class="card-toggle__glyph" aria-hidden="true">+</span></button>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Proposed</div>
+          <h3 class="card-title">Lecture Lens</h3>
+          <p class="card-summary">Turning recorded lectures into timestamped, searchable notes.</p>
+          <div class="card-details" id="d2" hidden>
+            <p><strong>Purpose.</strong> A three-hour recording is hard to revise from. Lecture Lens
+            produces structured notes where every bullet links back to the second it came from.</p>
+            <p><strong>My contribution.</strong> This is a proposed project, so my contribution is the
+            design work that exists today: the proposal and evaluation plan, the note schema, and a
+            working prototype that runs Whisper and a summariser over a 20-minute sample.</p>
+            <p class="muted">Python, Whisper, ffmpeg, LLM summarisation.</p>
+          </div>
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="d2">Show details<span class="card-toggle__glyph" aria-hidden="true">+</span></button>
+        </article>
+
+        <article class="card">
+          <div class="card-tag">Coursework</div>
+          <h3 class="card-title">Air, by District</h3>
+          <p class="card-summary">An AQHI dashboard for Hong Kong&rsquo;s 18 districts.</p>
+          <div class="card-details" id="d3" hidden>
+            <p><strong>Purpose.</strong> The official AQHI page reports one number per general station.
+            This dashboard shows the gap between districts and how it moves across a week.</p>
+            <p><strong>My contribution.</strong> I built the ETL job over the EPD open-data feed, designed
+            a colour-blind-safe sequential palette, and wrote the D3 charts and the small comparison view.</p>
+            <p class="muted">Python, D3, Svelte.</p>
+          </div>
+          <button class="card-toggle" type="button" aria-expanded="false" aria-controls="d3">Show details<span class="card-toggle__glyph" aria-hidden="true">+</span></button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="wrap">
+      <p class="kicker">03 &mdash; Contact</p>
+      <h2 class="section-title">Say hello</h2>
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <p>My personal email address and phone number are <strong>withheld</strong> while I am a
+          student. The form on the right is the intended way to reach me: it prepares a message in
+          your own mail client, sent to a pseudonymous course address.</p>
+          <p class="muted">This site is static, so nothing you type here is stored on a server. If the
+          form does not open your mail client, copy the address below.</p>
+          <p class="address-line"><span class="mono">marcus.chan@example.com</span></p>
+        </div>
+
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="field">
+            <label for="cf-name">Your name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" aria-describedby="cf-name-error" required>
+            <p class="field-error" id="cf-name-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" aria-describedby="cf-email-error" required>
+            <p class="field-error" id="cf-email-error" hidden></p>
+          </div>
+          <div class="field">
+            <label for="cf-message">Message</label>
+            <textarea id="cf-message" name="message" rows="4" aria-describedby="cf-message-error" required></textarea>
+            <p class="field-error" id="cf-message-error" hidden></p>
+          </div>
+          <button class="btn btn-primary btn-block" type="submit">Prepare message</button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="muted">&copy; 2026 Marcus Chan. Built for COMP5583.</p>
+    <div class="footer-links">
+      <h4>Elsewhere</h4>
+      <a href="#home">Back to top</a>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
